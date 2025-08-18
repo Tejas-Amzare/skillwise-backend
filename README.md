@@ -1,4 +1,4 @@
-# 🚀 SkillWise Backend
+#  SkillWise Backend  # 
 
 SkillWise is a **smart talent matching & upskilling platform** built with **Java Spring Boot**.  
 It provides secure authentication, user management, and a full **Post (CRUD + pagination + search)** module with JWT-based access control.
@@ -68,7 +68,7 @@ Swagger Docs: http://localhost:8080/swagger-ui.html
 
 📸 Swagger Preview
 
-(Add screenshot here)
+( screenshot here)
 <img width="1716" height="755" alt="Postman 1" src="https://github.com/user-attachments/assets/2d84206f-8eb2-4875-bf6b-b2bf832348c3" />
 <img width="1681" height="744" alt="Postman 2" src="https://github.com/user-attachments/assets/e25da717-2e90-4486-9767-d000aa3fcdf0" />
 <img width="1639" height="376" alt="Postman 3" src="https://github.com/user-attachments/assets/18cfb159-8ecb-4a95-a114-9b4bf1b59d73" />
