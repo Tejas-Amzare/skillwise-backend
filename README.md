@@ -71,7 +71,7 @@ http://localhost:8080/swagger-ui/index.html
 
 📸 Screenshots
 Swagger UI  :- 
-<img width="1716" height="755" alt="Postman 1" src="https://github.com/user-   attachments/assets/0bc9a030-b7ab-4bf1-9244-ec06bce6f3bf" />
+<img width="1716" height="755" alt="Postman 1" src="https://github.com/user-attachments/assets/3deda88b-cf0a-4d96-b1e3-ebe432749b48" />
 <img width="1681" height="744" alt="Postman 2" src="https://github.com/user-attachments/assets/a975e7bc-2a7c-452c-8a8a-5c3f91653457" />
 <img width="1639" height="376" alt="Postman 3" src="https://github.com/user-attachments/assets/d35bae73-d872-42b6-b8fd-3b5f0b5dc13e" />
 <img width="1696" height="863" alt="Postman 4" src="https://github.com/user-attachments/assets/7b6980e0-6af2-4520-8624-d83398229c60" />
