@@ -79,5 +79,8 @@ Swagger UI  :-
 
 
 
-Tejas Amzare
-🔗 LinkedIn | GitHub
+🙋‍♂️ Author
+Tejas Gajanan Amzare
+📧 tejasamzare@gmail.com
+🔗 LinkedIn -https://www.linkedin.com/in/tejas-amzare/
+
