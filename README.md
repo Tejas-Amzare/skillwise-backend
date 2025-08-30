@@ -62,6 +62,8 @@ spring.datasource.url=jdbc:mysql://localhost:3306/skillwise
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 jwt.secret=yourSecretKey
+<img width="761" height="681" alt="Screenshot 2025-08-18 000211" src="https://github.com/user-attachments/assets/be25e89d-3564-4334-96ca-07b3c5eb2f6b" />
+
 
 3.Run with Maven:
 mvn spring-boot:run
