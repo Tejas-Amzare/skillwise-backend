@@ -187,5 +187,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 📫 Contact
 Tejas Gajanan Amzare
+
 📧 Email: tejasamzare@gmail.com
+
 🔗 LinkedIn: https://www.linkedin.com/in/tejas-amzare
