@@ -82,7 +82,6 @@ cd skillwise-backend
 Configure application.properties:
 
 
-Copy code
 spring.datasource.url=jdbc:mysql://localhost:3306/skillwise
 spring.datasource.username=root
 spring.datasource.password=yourpassword
@@ -90,19 +89,17 @@ jwt.secret=yourSecretKey
 Run the application with Maven:
 
 
-Copy code
 mvn spring-boot:run
 Access Swagger UI:
 
 
-Copy code
+
 http://localhost:8080/swagger-ui/index.html
 💻 Usage
 Once running, you can test API endpoints using Swagger or Postman. Example requests:
 
 Register a User
-http
-Copy code
+
 POST /api/auth/register
 Content-Type: application/json
 
@@ -111,9 +108,11 @@ Content-Type: application/json
   "email": "john@example.com",
   "password": "Password123"
 }
+
+
 Login
-http
-Copy code
+
+
 POST /api/auth/login
 Content-Type: application/json
 
@@ -122,7 +121,7 @@ Content-Type: application/json
   "password": "Password123"
 }
 Get User Profile (Authorized)
-http
+
 
 GET /api/user/profile
 Authorization: Bearer <JWT_TOKEN>
@@ -157,10 +156,17 @@ GET	/api/posts/my-posts	Get user's posts
 📸 Visuals
 Swagger UI
 
+<img width="1716" height="755" alt="Postman 1" src="https://github.com/user-attachments/assets/d8e1c36a-39da-43e9-a9e7-19d32ea00288" />
+
 Browse all endpoints and test APIs easily.
 
 Sample Postman Requests
 
+<img width="1681" height="744" alt="Postman 2" src="https://github.com/user-attachments/assets/cbd7e227-d682-40d4-8627-87e0f06f04c7" />
+
+<img width="1639" height="376" alt="Postman 3" src="https://github.com/user-attachments/assets/04f7de33-ec4b-4e7b-aeb3-ba897b395f62" />
+
+<img width="1696" height="863" alt="Postman 4" src="https://github.com/user-attachments/assets/e1afbeb3-3981-49d6-9acf-cefd65349e68" />
 
 
 🤝 Contributing
