@@ -177,7 +177,7 @@ Swagger UI
 
 Browse all endpoints and test APIs easily.
 
-Sample Postman Requests
+### Sample Postman Requests
 
 <img width="1681" height="744" alt="Postman 2" src="https://github.com/user-attachments/assets/cbd7e227-d682-40d4-8627-87e0f06f04c7" />
 
@@ -187,7 +187,7 @@ Sample Postman Requests
 
 ---
 
-🤝 Contributing
+### 🤝 Contributing
 Contributions are welcome! Please follow these steps:
 
 Fork the repository
@@ -202,11 +202,11 @@ Open a Pull Request
 
 --- 
 
-📝 License
+### 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-📫 Contact
+### 📫 Contact
 Tejas Gajanan Amzare
 
 📧 Email: tejasamzare@gmail.com
