@@ -100,7 +100,7 @@ http://localhost:8080/swagger-ui/index.html
 
 ---
 
-💻 Usage
+### 💻 Usage
 Once running, you can test API endpoints using Swagger or Postman. Example requests:
 
 Register a User
@@ -116,7 +116,7 @@ Content-Type: application/json
 
 ---
 
-Login
+### Login
 
 
 POST /api/auth/login
@@ -129,7 +129,7 @@ Content-Type: application/json
 
 ---
 
-Get User Profile (Authorized)
+### Get User Profile (Authorized)
 
 
 GET /api/user/profile
@@ -142,7 +142,7 @@ POST	/api/auth/login	Login & get JWT
 
 ---
 
-User
+### User
 Method	Endpoint	Description
 GET	/api/user/profile	Get user profile
 PUT	/api/user/update	Update profile
@@ -150,7 +150,7 @@ DELETE	/api/user/delete	Delete account
 
 ---
 
-Admin
+### Admin
 Method	Endpoint	Description
 GET	/api/admin/users	List all users
 GET	/api/admin/user/{id}	Get user by ID
@@ -159,7 +159,7 @@ PUT	/api/admin/user/{id}/role	Update user role
 
 ---
 
-Posts
+### Posts
 Method	Endpoint	Description
 POST	/api/posts/createPost	Create new post
 GET	/api/posts/{id}	Get post by ID
@@ -170,7 +170,7 @@ GET	/api/posts/my-posts	Get user's posts
 
 ---
 
-📸 Visuals
+### 📸 Visuals
 Swagger UI
 
 <img width="1716" height="755" alt="Postman 1" src="https://github.com/user-attachments/assets/d8e1c36a-39da-43e9-a9e7-19d32ea00288" />
@@ -212,4 +212,6 @@ Tejas Gajanan Amzare
 📧 Email: tejasamzare@gmail.com
 
 🔗 LinkedIn: https://www.linkedin.com/in/tejas-amzare
+
+
 ---
