@@ -7,187 +7,238 @@
 
 ---
 
-## 📖 Overview
-**SkillWise** is a backend application designed to **connect job seekers with relevant opportunities based on their skills** and provide **personalized learning recommendations** to improve career growth.  
+📋 Overview
 
-It features **secure authentication, role-based access, dashboards, and admin analytics**, making it suitable for modern HR and recruitment systems.
+SkillWise is a backend system designed to intelligently connect job seekers with opportunities that best match their skills while providing personalized learning recommendations to help users upskill for career growth.
 
----
+It features secure JWT authentication, role-based access control, post management, user dashboards, and an admin analytics system — built for scalable and data-driven recruitment or e-learning platforms.
 
-## 📌 Table of Contents
-- [Tech Stack](#-tech-stack)
-- [Features](#-features)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [API Endpoints](#-api-endpoints)
-- [Visuals](#-visuals)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
+🛠️ Technology Stack
+Category	Technology
+Backend Framework	Spring Boot 3
+Language	Java 17
+Database	MySQL / PostgreSQL (AWS RDS)
+ORM	Spring Data JPA / Hibernate
+Security	Spring Security + JWT
+API Documentation	Swagger / OpenAPI
+Cloud Deployment	AWS EC2, S3, SES
+Build Tool	Maven
+Validation	Jakarta Validation
+🚀 Features
+Core Functionality
+🔐 Authentication & Authorization
 
----
+User registration & login with JWT
 
-## 🛠 Tech Stack
-- **Language:** Java 17  
-- **Framework:** Spring Boot 3  
-- **Database:** MySQL / PostgreSQL (AWS RDS)  
-- **Authentication:** Spring Security with JWT  
-- **Documentation:** Swagger / OpenAPI  
-- **Deployment:** AWS EC2, S3, SES  
+Role-based access (USER, ADMIN)
 
----
+Secure password encryption using BCrypt
 
-## ✨ Features
-- 🔐 User Authentication (Register/Login with JWT)  
-- 👤 Role-based access (User & Admin)  
-- 📝 User profile management (update, delete)  
-- 📌 Skill-based job matching system  
-- 📚 Personalized learning recommendations  
-- 📊 Dashboard for users and admins  
-- 👨‍💼 Admin panel for managing users and analytics  
+👤 User Management
 
----
+Update or delete user profiles
 
-## 📂 Project Structure
+Fetch user details via JWT authorization
+
+📝 Post Management
+
+Create, read, update, and delete posts
+
+View user-specific posts
+
+Search posts by keywords
+
+💡 Skill Matching & Learning
+
+Skill-based job recommendations
+
+Personalized upskilling course suggestions
+
+📊 Analytics & Dashboard
+
+Admin dashboards for monitoring user activity
+
+Data-driven insights for system performance
+
+🧠 Admin Functionalities
+
+View all users
+
+Manage user roles
+
+Remove inactive or spam users
+
+🧩 Technical Features
+
+RESTful API architecture
+
+Layered structure (Controller, Service, Repository)
+
+Centralized exception handling
+
+Input validation and clean response DTOs
+
+📦 Project Structure
 skillwise-backend/
-┣ src/main/java/com/skillwise/
-┃ ┣ config/ # Security & JWT configuration
-┃ ┣ controller/ # REST APIs
-┃ ┣ entity/ # Database models
-┃ ┣ repository/ # JPA Repositories
-┃ ┣ service/ # Business logic
-┃ ┗ SkillwiseApplication.java
-┣ src/main/resources/
-┃ ┗ application.properties
-┣ pom.xml
-┗ README.md
+├── config/
+│   ├── SecurityConfig.java
+│   ├── SwaggerConfig.java
+│   └── jwt/
+│       ├── JwtAuthFilter.java
+│       └── JwtUtils.java
+├── controller/
+│   ├── AuthController.java
+│   ├── UserController.java
+│   ├── AdminController.java
+│   └── PostController.java
+├── entity/
+│   ├── User.java
+│   ├── Role.java
+│   └── Post.java
+├── repository/
+│   ├── UserRepository.java
+│   └── PostRepository.java
+├── service/
+│   ├── AuthService.java
+│   ├── UserService.java
+│   ├── PostService.java
+│   └── CustomUserDetailsService.java
+└── SkillWiseApplication.java
 
+🔧 Setup & Installation
+Prerequisites
 
+Java 17 or higher
 
----
+Maven 3.6+
 
-## ⚙️ Installation
-### Prerequisites
-- Java 17
-- Maven 3+
-- MySQL or PostgreSQL installed
-- Postman (optional, for API testing)
+MySQL or PostgreSQL
 
-### Steps
-1. Clone the repository:
+IDE (IntelliJ, Eclipse, VS Code)
+
+Installation Steps
+
+1️⃣ Clone the Repository
 
 git clone https://github.com/Tejas-Amzare/skillwise-backend.git
 cd skillwise-backend
-Configure application.properties:
 
+
+2️⃣ Configure Database
 
 spring.datasource.url=jdbc:mysql://localhost:3306/skillwise
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 jwt.secret=yourSecretKey
-Run the application with Maven:
 
 
+3️⃣ Build & Run
+
+mvn clean install
 mvn spring-boot:run
-Access Swagger UI:
 
 
+4️⃣ Access
 
-http://localhost:8080/swagger-ui/index.html
-💻 Usage
-Once running, you can test API endpoints using Swagger or Postman. Example requests:
+Base URL: http://localhost:8080
 
-Register a User
+Swagger UI: http://localhost:8080/swagger-ui/index.html
 
-POST /api/auth/register
-Content-Type: application/json
+API Docs: http://localhost:8080/v3/api-docs
 
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "Password123"
-}
-
-
-Login
-
-
-POST /api/auth/login
-Content-Type: application/json
-
-{
-  "email": "john@example.com",
-  "password": "Password123"
-}
-Get User Profile (Authorized)
-
-
-GET /api/user/profile
-Authorization: Bearer <JWT_TOKEN>
-🔑 API Endpoints (Sample)
-Auth
+📚 API Endpoints
+Authentication
 Method	Endpoint	Description
-POST	/api/auth/register	Register new user
-POST	/api/auth/login	Login & get JWT
-
+POST	/api/auth/register	Register a new user
+POST	/api/auth/login	Login & get JWT token
 User
 Method	Endpoint	Description
-GET	/api/user/profile	Get user profile
+GET	/api/user/profile	Get logged-in user details
 PUT	/api/user/update	Update profile
 DELETE	/api/user/delete	Delete account
-
 Admin
 Method	Endpoint	Description
-GET	/api/admin/users	List all users
+GET	/api/admin/users	Get all users
 GET	/api/admin/user/{id}	Get user by ID
-DELETE	/api/admin/user/{id}	Delete user
 PUT	/api/admin/user/{id}/role	Update user role
-
+DELETE	/api/admin/user/{id}	Delete user by ID
 Posts
 Method	Endpoint	Description
-POST	/api/posts/createPost	Create new post
+POST	/api/posts/createPost	Create a new post
 GET	/api/posts/{id}	Get post by ID
-PUT	/api/posts/{id}	Update post by ID
-DELETE	/api/posts/{id}	Delete post by ID
+PUT	/api/posts/{id}	Update post
+DELETE	/api/posts/{id}	Delete post
 GET	/api/posts/search	Search posts by keyword
-GET	/api/posts/my-posts	Get user's posts
+GET	/api/posts/my-posts	Get logged-in user’s posts
+🔐 Authentication
 
-📸 Visuals
-Swagger UI
+All secured endpoints require a JWT token in the header:
 
-<img width="1716" height="755" alt="Postman 1" src="https://github.com/user-attachments/assets/d8e1c36a-39da-43e9-a9e7-19d32ea00288" />
+Authorization: Bearer <your_token>
 
-Browse all endpoints and test APIs easily.
-
-Sample Postman Requests
-
-<img width="1681" height="744" alt="Postman 2" src="https://github.com/user-attachments/assets/cbd7e227-d682-40d4-8627-87e0f06f04c7" />
-
-<img width="1639" height="376" alt="Postman 3" src="https://github.com/user-attachments/assets/04f7de33-ec4b-4e7b-aeb3-ba897b395f62" />
-
-<img width="1696" height="863" alt="Postman 4" src="https://github.com/user-attachments/assets/e1afbeb3-3981-49d6-9acf-cefd65349e68" />
+📸 Visuals & Swagger UI
+<img width="1716" height="755" alt="Postman 1" src="https://github.com/user-attachments/assets/2ead8e26-87c4-4c12-84f7-689ef69c1646" />
+<img width="1681" height="744" alt="Postman 2" src="https://github.com/user-attachments/assets/2508a813-ad1b-44ae-9e24-d80403deb611" />
+<img width="1639" height="376" alt="Postman 3" src="https://github.com/user-attachments/assets/28ae53a2-558b-4dca-91e5-d7fef8f87fc4" />
+<img width="1696" height="863" alt="Postman 4" src="https://github.com/user-attachments/assets/cddedc1e-90ec-43a1-917c-f7e48275b979" />
 
 
-🤝 Contributing
-Contributions are welcome! Please follow these steps:
+🎯 Key Highlights for Resume
 
-Fork the repository
+✅ RESTful API Development using Spring Boot
 
-Create a feature branch (git checkout -b feature-name)
+✅ JWT Authentication & Role-based Security
 
-Commit your changes (git commit -m "Add feature")
+✅ MySQL/PostgreSQL Database Design
 
-Push to the branch (git push origin feature-name)
+✅ AWS Deployment (EC2, S3, SES)
 
-Open a Pull Request
+✅ Comprehensive Swagger Documentation
+
+✅ Scalable Microservice Architecture
+
+✅ Global Exception Handling & Input Validation
+
+🔒 Security Features
+
+JWT-based authentication
+
+BCrypt password hashing
+
+Role-based access control
+
+CORS configuration
+
+SQL injection prevention
+
+Data validation & sanitization
+
+📈 Future Enhancements
+
+AI-based skill recommendation engine
+
+Job posting approval workflow for admins
+
+Email notifications via AWS SES
+
+Integration with external job APIs
+
+Analytics dashboards with charts
+
+Resume parsing and profile scoring
 
 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-📫 Contact
+This project is licensed under the MIT License.
+
+👤 Author
+
 Tejas Gajanan Amzare
 
 📧 Email: tejasamzare@gmail.com
 
-🔗 LinkedIn: https://www.linkedin.com/in/tejas-amzare
+🔗 LinkedIn: linkedin.com/in/tejas-amzare
+
+💻 GitHub: github.com/Tejas-Amzare
+
+Built with ❤️ using Spring Boot
