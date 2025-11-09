@@ -74,6 +74,8 @@ skillwise-backend/
 - MySQL or PostgreSQL installed
 - Postman (optional, for API testing)
 
+--- 
+
 ### Steps
 1. Clone the repository:
 
@@ -95,6 +97,9 @@ Access Swagger UI:
 
 
 http://localhost:8080/swagger-ui/index.html
+
+---
+
 💻 Usage
 Once running, you can test API endpoints using Swagger or Postman. Example requests:
 
