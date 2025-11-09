@@ -114,6 +114,7 @@ Content-Type: application/json
   "password": "Password123"
 }
 
+---
 
 Login
 
@@ -125,6 +126,9 @@ Content-Type: application/json
   "email": "john@example.com",
   "password": "Password123"
 }
+
+---
+
 Get User Profile (Authorized)
 
 
@@ -136,11 +140,15 @@ Method	Endpoint	Description
 POST	/api/auth/register	Register new user
 POST	/api/auth/login	Login & get JWT
 
+---
+
 User
 Method	Endpoint	Description
 GET	/api/user/profile	Get user profile
 PUT	/api/user/update	Update profile
 DELETE	/api/user/delete	Delete account
+
+---
 
 Admin
 Method	Endpoint	Description
@@ -148,6 +156,8 @@ GET	/api/admin/users	List all users
 GET	/api/admin/user/{id}	Get user by ID
 DELETE	/api/admin/user/{id}	Delete user
 PUT	/api/admin/user/{id}/role	Update user role
+
+---
 
 Posts
 Method	Endpoint	Description
@@ -157,6 +167,8 @@ PUT	/api/posts/{id}	Update post by ID
 DELETE	/api/posts/{id}	Delete post by ID
 GET	/api/posts/search	Search posts by keyword
 GET	/api/posts/my-posts	Get user's posts
+
+---
 
 📸 Visuals
 Swagger UI
@@ -173,6 +185,7 @@ Sample Postman Requests
 
 <img width="1696" height="863" alt="Postman 4" src="https://github.com/user-attachments/assets/e1afbeb3-3981-49d6-9acf-cefd65349e68" />
 
+---
 
 🤝 Contributing
 Contributions are welcome! Please follow these steps:
@@ -187,12 +200,16 @@ Push to the branch (git push origin feature-name)
 
 Open a Pull Request
 
+--- 
+
 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+---
 📫 Contact
 Tejas Gajanan Amzare
 
 📧 Email: tejasamzare@gmail.com
 
 🔗 LinkedIn: https://www.linkedin.com/in/tejas-amzare
+---
