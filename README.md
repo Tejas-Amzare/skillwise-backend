@@ -50,6 +50,7 @@ It features **secure authentication, role-based access, dashboards, and admin an
 ---
 
 ## 📂 Project Structure
+```bash
 skillwise-backend/
 ┣ src/main/java/com/skillwise/
 ┃ ┣ config/ # Security & JWT configuration
@@ -64,6 +65,7 @@ skillwise-backend/
 ┗ README.md
 
 
+```
 
 ---
 
