@@ -104,7 +104,7 @@ http://localhost:8080/swagger-ui/index.html
 Once running, you can test API endpoints using Swagger or Postman. Example requests:
 
 Register a User
-
+```bash
 POST /api/auth/register
 Content-Type: application/json
 
@@ -113,12 +113,12 @@ Content-Type: application/json
   "email": "john@example.com",
   "password": "Password123"
 }
-
+```
 ---
 
 ### Login
 
-
+```bash
 POST /api/auth/login
 Content-Type: application/json
 
@@ -127,11 +127,13 @@ Content-Type: application/json
   "password": "Password123"
 }
 
+```
+
 ---
 
 ### Get User Profile (Authorized)
 
-
+```bash
 GET /api/user/profile
 Authorization: Bearer <JWT_TOKEN>
 🔑 API Endpoints (Sample)
@@ -140,27 +142,36 @@ Method	Endpoint	Description
 POST	/api/auth/register	Register new user
 POST	/api/auth/login	Login & get JWT
 
+
+```
 ---
 
 ### User
+
 Method	Endpoint	Description
+```bash
 GET	/api/user/profile	Get user profile
 PUT	/api/user/update	Update profile
 DELETE	/api/user/delete	Delete account
 
+
+```
 ---
 
 ### Admin
 Method	Endpoint	Description
+```bash
 GET	/api/admin/users	List all users
 GET	/api/admin/user/{id}	Get user by ID
 DELETE	/api/admin/user/{id}	Delete user
 PUT	/api/admin/user/{id}/role	Update user role
 
+```
 ---
 
 ### Posts
 Method	Endpoint	Description
+```bash
 POST	/api/posts/createPost	Create new post
 GET	/api/posts/{id}	Get post by ID
 PUT	/api/posts/{id}	Update post by ID
@@ -168,6 +179,7 @@ DELETE	/api/posts/{id}	Delete post by ID
 GET	/api/posts/search	Search posts by keyword
 GET	/api/posts/my-posts	Get user's posts
 
+```
 ---
 
 ### 📸 Visuals
